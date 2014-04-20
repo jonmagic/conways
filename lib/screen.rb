@@ -10,9 +10,9 @@ class Screen
   attr_reader :coordinate_system
 
   def draw
-    0.upto(coordinate_system.height - 1) do |y|
+    coordinate_system.height.times do |y|
       line = ""
-      0.upto(coordinate_system.width - 1) do |x|
+      coordinate_system.width.times do |x|
         line << coordinate_system.value_at(x,y).to_s
       end
       puts line
